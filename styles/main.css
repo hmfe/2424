@@ -1,0 +1,222 @@
+*,
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.main {
+  display: block;
+  width: 450px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 920px) {
+  .main {
+    width: 700px;
+  }
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  margin-top: 50px;
+  font-size: 28px;
+}
+
+.btn {
+  font-weight: 800;
+}
+
+.second-task {
+  width: 450px;
+  margin: 0 auto;
+}
+.btn.delete {
+  background-color: #f1a64f;
+  border: 1px solid #828180;
+  position: relative;
+  padding: 13px 40px 13px 5px;
+}
+
+.btn.delete:after {
+  content: '\2715';
+  right: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: 11px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.search-wrap {
+  width: 100%;
+  max-width: 460px;
+  display: block;
+  margin-top: 20px;
+  padding: 5px;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.input-search {
+  width: 100%;
+  padding: 20px 10px;
+  font-size: 18px;
+  position: relative;
+}
+
+.search-wrap.loading:after {
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  animation: spin 1s infinite linear;
+  top: 25px;
+  left: -50px;
+  background-image: url('../assets/icons/spinner.png');
+  background-size: 25px;
+}
+
+.search-list-wrap {
+  width: 100%;
+}
+
+.list-autocomplete {
+  list-style: none;
+  border: 1px solid #d1d1d1;
+  background-color: white;
+  margin: 2px 0 0;
+  width: 100%;
+  padding: 0 10px;
+  max-height: 200px;
+  overflow-y: scroll;
+  display: none;
+}
+
+.list-autocomplete li {
+  padding: 10px 0;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.list-autocomplete li a {
+  cursor: pointer;
+}
+
+/* Selected Character */
+.selected-character {
+  display: none;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.selected-character h3 {
+  margin-top: 0;
+}
+
+.char-info {
+  column-count: 2;
+}
+
+.selected-character p {
+  margin-top: 2px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.selected-character span {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.history-wrap {
+  display: none;
+  padding: 0 20px;
+}
+
+.history-header {
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.history-header h3 {
+  margin: 0;
+}
+
+.history-header button {
+  background-color: transparent;
+  border: 0;
+  text-decoration: underline;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.list-history {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list-history li {
+  border-top: 1px solid #eaeaea;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-history li .item-info p {
+  display: inline-block;
+  margin: 0;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.list-history li .item-info button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-history li .item-info button:after {
+  content: '\2715';
+  color: #b3b3b3;
+}
+
+.list-history li a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.list-history li a:hover {
+  text-decoration: underline;
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+.show {
+  display: block;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
