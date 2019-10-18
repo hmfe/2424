@@ -68,9 +68,33 @@ h2 {
 
 .input-search {
   width: 100%;
-  padding: 20px 10px;
+  padding: 20px 20px;
   font-size: 18px;
-  position: relative;
+}
+
+button.clear {
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  cursor: pointer;
+  display: none;
+}
+
+button.clear:after {
+  content: '\2715';
+  font-size: 18px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+button.clear.show {
+  display: block;
 }
 
 .search-wrap.loading:after {
@@ -102,7 +126,7 @@ h2 {
 }
 
 .list-autocomplete li {
-  padding: 10px 0;
+  padding: 10px 10px;
   text-transform: capitalize;
   cursor: pointer;
 }
