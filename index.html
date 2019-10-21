@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Work task H&M</title>
+    <meta name="author" content="Joakim Forslund" />
+    <meta
+      name="description"
+      content="Front end work task assigned to Joakim Forslund."
+    />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+  </head>
+  <body>
+    <section class="main">
+      <h1>Work task H&M</h1>
+
+      <h2>Task 1.</h2>
+      <button class="btn delete">Delete</button>
+
+      <h2>Task 3.</h2>
+      <div class="second-task">
+        <div class="selected-character" id="selectedCharacter">
+          <span>Name: </span>
+          <h3 id="charName"></h3>
+
+          <div class="char-info">
+            <span>Height (cm):</span>
+            <p id="charHeight"></p>
+            <span>Mass (kg): </span>
+            <p id="charMass"></p>
+            <span>Hair color: </span>
+            <p id="charHairColor"></p>
+            <span>Skin color: </span>
+            <p id="charSkinColor"></p>
+          </div>
+        </div>
+
+        <div class="search-wrap" id="searchWrap">
+          <button class="clear" id="searchClear" aria-label="clear"></button>
+          <input
+            class="input-search"
+            type="text"
+            placeholder="Search for Star Wars characters..."
+            id="inputSearch"
+          />
+          <div class="search-list-wrap">
+            <ul class="list-autocomplete" id="listAutocomplete"></ul>
+            <div class="history-wrap" id="wrapHistory">
+              <div class="history-header">
+                <h3>Search history</h3>
+                <button id="clearHistory">Clear search history</button>
+              </div>
+              <ul class="list-history" id="listHistory"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
