@@ -157,9 +157,10 @@ class SearchApplication {
         JSON.stringify([{ name: characterName, url: characterUrl, date: dateString }]),
       );
     } else {
-      const searchHistory = JSON.parse(localStorage.getItem('history'));
+      this.searchHistory = JSON.parse(localStorage.getItem('history'));
       this.searchHistory.unshift({ name: characterName, url: characterUrl, date: dateString });
-      localStorage.setItem('history', JSON.stringify(searchHistory));
+      localStorage.removeItem('history');
+      localStorage.setItem('history', JSON.stringify(this.searchHistory));
     }
   }
 
